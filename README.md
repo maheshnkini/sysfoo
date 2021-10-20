@@ -6,4 +6,4 @@ TEST 2 - Getting the blue ocean pipeline to pick up the changes being committed 
 
 Test 3 - Creating a custom branch to see if blueocean auto triggers pipeline jobs for the new branch
 
-Test 4 - Test checking to master branch
+Test 4 - Test checking to master branch after actually enabling branch protection rules
