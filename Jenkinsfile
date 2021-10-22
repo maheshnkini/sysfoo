@@ -26,9 +26,9 @@ pipeline {
     }
 
     stage('Generate Artifacts') {
-         when {
-                branch 'master'
-            }
+      when {
+        branch 'master'
+      }
       parallel {
         stage('package') {
           agent {
@@ -46,7 +46,6 @@ pipeline {
         stage('Docker BnP') {
           agent any
           steps {
-            sleep 2
             script {
               docker.withRegistry('https://index.docker.io/v1/', 'dockerlogin') {
                 def dockerImage = docker.build("maheshnkini/sysfoo:v${env.BUILD_ID}", "./")
