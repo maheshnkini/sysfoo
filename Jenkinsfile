@@ -25,7 +25,7 @@ pipeline {
       }
     }
 
-    stage('package') {
+    stage('Generate Artifacts') {
          when {
                 branch 'master'
             }
@@ -59,6 +59,15 @@ pipeline {
           }
         }
 
+      }
+    }
+
+    stage('Deploy to Dev')
+    {
+      when { branch 'master'}
+      agent any
+      steps {
+        sh 'docker-compose up -d'
       }
     }
 

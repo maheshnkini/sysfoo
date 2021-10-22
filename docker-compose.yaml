@@ -1,0 +1,7 @@
+version : "3.8"
+
+services:
+  sysfoo:
+    image: maheshnkini/sysfoo:latest
+    ports:
+      - 8887:8880
